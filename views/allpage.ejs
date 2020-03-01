@@ -1,0 +1,39 @@
+<%- include('_layouts/header') -%>
+<form action="/logout">
+    <input value="Log Off" type="Submit" id="logOffBtn">
+    </form>
+    <br>
+    <span>Welcome Admin!</span>
+    <br>
+<%- include('_layouts/nav') -%>
+
+<form action="/newpage" class="addNewForm">
+<input value="New Page" type="Submit" id="newpageBtn">
+<input value="Edit Header" formaction="/editheader" type="Submit">
+<input value="View Pages" type="submit" formaction="/">
+</form>
+<br>
+<br>
+<br>
+<br>
+<main class="AllPage">
+    <h3>List of Pages</h3>
+<table class="pageTable">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th colspan="2" colspan="2">Manage</th>
+    </tr>
+    <% Page.forEach(function(page){
+        %>
+    <tr>
+        <td><%= page.title %></td>
+        <td><%= page.author %></td>
+        <td><a href="/edit/<%= page._id %>">Edit</a></td>
+        <td><a href="/delete/<%= page._id %>">Delete</a></td>
+    </tr>
+    <%
+}); %>
+</table>
+</main>
+<%- include('_layouts/footer') -%>

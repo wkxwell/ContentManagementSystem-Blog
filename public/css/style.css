@@ -1,0 +1,378 @@
+/*-------------------*/
+/*----HTML---*/
+/*-------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #ffffff;
+    color: #bcbcbc;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.51)),                                                 url(../images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/*--------------------------*/
+/*----Reusable Components---*/
+/*--------------------------*/
+
+h1{
+    margin: 0 0 20px;
+    word-spacing: 4px; 
+    font-size: 200%;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+h2{
+    font-size: 150%;
+    word-spacing: 2px;
+    font-weight: 200;
+}
+
+h3 {
+    font-size:120%;
+    margin-bottom: 15px;
+    letter-spacing: 0;
+    font-weight: 300;
+}
+
+h4{
+    font-size: 100%;
+    font-weight: 400;
+    float: left;
+}
+
+p{
+    font-size: 90%;
+    font-weight: 400;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+    color: rgba(127, 235, 255, 0.68);
+    transition: 0.5s;
+}
+
+a:hover,
+a:active{
+    color: #ff4444;
+}
+
+.current{
+    color:rgba(95, 148, 209, 0.699);
+}
+/*-------------------*/
+/*----Header---*/
+/*-------------------*/
+
+header{
+    margin: 3em;
+    border-bottom: 2px solid #ccc;
+}
+header img{
+    width: 180px;
+    height: 143px;
+    border-radius: 50%;
+    position: absolute;
+    right: 24%;
+    top: 3%;
+}
+
+h1,h2{
+    margin-top: 50px;
+}
+
+h2{
+    padding-bottom: 0.5em;
+    margin: 20px 0;
+}
+
+input{
+    float: right;
+    margin:0.5em 0;
+    border: 2px solid #ccc;
+    background: transparent;
+    color: #8d8d8d;
+    font-size: 80%;
+    padding: 0.4em 1.3em;
+    transition: 0.8s;
+}
+
+input:hover,
+input:active{
+    background: #989898;
+    border: 2px solid #989898;
+    color: aliceblue;
+}
+
+/*-------------------*/
+/*----Navigation---*/
+/*-------------------*/
+
+nav{
+    margin: 0 0 50px 0;
+}
+nav ul li{
+    list-style: none;
+    padding: 0.5em;
+    text-align: center;
+    background-color: rgba(42, 43, 46, 0.44);
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;    
+    padding: 1em;
+    transition: 0.5s;
+}
+
+nav ul li a:hover,
+nav ul li a:active{
+    color: rgba(114, 172, 152, 0.62)
+}
+
+/*-------------------*/
+/*----Body Heading---*/
+/*-------------------*/
+
+main h3{
+    padding: 1em;
+    text-align: center;
+}
+
+main h4{
+    padding: 0 50px;
+    text-align: left;
+    display: inline-block;
+    width: 800px;
+}
+
+/*-------------------*/
+/*----Body Content---*/
+/*-------------------*/
+main{
+    height: 450px;
+    margin: 5px auto;
+    width: 1140px;
+}
+
+main .container{
+    color: white;
+}
+
+main .container img{
+    width: 400px;
+    float: left;
+    padding: 50px;
+    border-radius: 80px;
+    transition: 0.5s;
+}
+
+main .container img:hover{
+    opacity: 0.5;
+}
+
+main p{
+    padding: 1em;
+    margin-top: 30px;
+    float: right;
+    width: 500px;
+    margin-right: 80px;
+    line-height: 30px
+}
+
+/*-------------------*/
+/*----Footert---*/
+/*-------------------*/
+
+footer{
+    clear: both;
+    padding: 1em;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.74);
+    text-align: center;
+}
+
+
+/*---------------------------------*/
+/*-----------Login Page------------*/
+/*---------------------------------*/
+body .login{
+    height: 150px;
+}
+
+main form{
+    width: 500px;
+    margin: 0 auto;
+}
+
+main form input[type=text],
+main form input[type=password],
+textarea{
+    margin: 0;
+    font-size: 80%;
+    color: white;
+    border-radius: 5px;
+}
+
+main form input[type=submit]{
+    margin-top: 25px;
+}
+
+main label{
+    float: left;
+    display: block;
+    width: 20%;
+    padding: 5px;
+    border-bottom: 1px solid grey;
+}
+
+/*---------------------------------*/
+/*-----------Add New Page----------*/
+/*---------------------------------*/
+
+.AddPage label{
+    width: 40%;
+    border: none;
+    display: block;
+    margin: 10px 0
+}
+.newpage {
+    width: 800px;
+}
+
+.newpage input[type=text],
+textarea{
+    display: inline-block;
+    width: 100%;
+    float:left;
+    margin: 10px
+}
+
+.newpage input[type=text]{
+    width: 95%;
+}
+.ck-editor {
+    font-size: 90%;
+    color: black;
+    opacity: 0.6;
+    float: left;
+    text-align: left;
+}
+
+.ck-editor__editable {
+    height: 200px;
+    width: 127%;
+}
+
+.ck-editor__editable p{
+    float:left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.newpage input[type=file]{
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid white;
+}
+
+.newpage input[type=file],
+.newpage input[type=reset],
+.newpage input[type=submit]{
+    clear: both;
+    float: left;
+}
+
+.newpage input[type=reset],
+.newpage input[type=submit]{
+    margin: 30px 0;
+    width: 25%;
+    font-size: 1em;
+    float: left;
+    color: white;
+}
+
+.newpage input[type=reset]{
+    width: 15%;
+}
+
+.newpage input[type=submit]{
+    margin-bottom: 50px;
+}
+
+/*---------------------------------*/
+/*-----------Log off----------*/
+/*---------------------------------*/
+
+.logoff{
+    height: 129px;
+}
+
+.logoff input{
+    float: none;
+    font-size: 20px;
+    margin-left: 47%
+}
+
+/*---------------------------------*/
+/*-----------All Pages----------*/
+/*---------------------------------*/
+.AllPage {
+    height: 700px;
+}
+
+.AllPage h3{
+    padding: 25px;
+}
+
+table{
+    margin: 5px auto;
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+table tr th{
+    padding: 0.5em;
+    border: 3px solid white;
+    background-color: rgba(111, 116, 116, 0.56);
+    color: rgba(255, 255, 255, 0.54);
+}
+
+table tr td{
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    border:1px solid white;
+    background-color: rgba(136, 80, 6, 0.16)
+}
+
+span{
+    float: right;
+    margin-right: 20px;
+}
+
+.addNewForm input{
+    padding: 5px;
+    width: 150px;
+    float: left;
+    display:inline-block;
+    margin: 15px;
+}

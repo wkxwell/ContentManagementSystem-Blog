@@ -1,0 +1,31 @@
+<%- include('_layouts/header') -%>
+<form action="/allpage">
+    <input value="Back" type="Submit" id="logOffBtn">
+    </form>
+    <br>
+    <span>Welcome Admin!</span>
+    <br>
+              
+<main class="AddPage">
+            <h3>Edit Your Header</h3>
+            
+            <form method="POST" action="/editheader" enctype="multipart/form-data" class="newpage">
+                <label for="mainTitle">Title:</label>
+                <input type="text" name="mainTitle" value="<%= Header.mainTitle%>">
+                <br>
+                <br>
+                <label for="subTitle">Sub Title:</label>
+                <input type="text" name="subTitle" value="<%= Header.subTitle%>">
+                <br>
+                <br>
+                <label for="LogoImage">Logo Image:</label>
+                <input type="file" name="logo">
+                <br>
+                <input type="submit" value="Save">
+                <br>
+            </form>
+            <form action="/allpage" class="newpage">
+            <input value="Back" type="Submit" id="logOffBtn">
+            </form>
+        </main>
+<%- include('_layouts/footer') -%>     

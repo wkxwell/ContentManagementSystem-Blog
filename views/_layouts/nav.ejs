@@ -1,0 +1,17 @@
+
+
+
+<nav class="nav_list">
+                <ul>
+                    <li>
+                    <a href="/">Intro</a>
+                    <% Page.forEach(function(page){
+                        %>
+                    <a class="home" href="/single/<%= page.title %>"><%= page.title %></a>
+                    <%
+                    }); %>
+                    </li>
+                   
+                </ul>
+                
+            </nav>    

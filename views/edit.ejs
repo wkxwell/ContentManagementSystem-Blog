@@ -1,0 +1,52 @@
+<%- include('_layouts/header') -%>
+<form action="/allpage">
+    <input value="Back" type="Submit" id="logOffBtn">
+    </form>
+    <br>
+    <span>Welcome Admin!</span>
+    <br>
+              
+<main class="AddPage">
+            <h3>Edit Current Page</h3>
+            
+            <form method="POST" action="/edit/<%= Page._id%>" enctype="multipart/form-data" class="newpage">
+                <label for="author">Author:</label>
+                <input type="text" name="author" value="<%= Page.author %>">
+                <br>
+                <br>
+                <label for="title">Title (Keep it within two words) :</label>
+                <input type="text" name="title" id="title" value="<%= Page.title %>">
+                <br>
+                <br>
+                <label for="headingOne">Heading 1:</label>
+                <input type="text" name="headingOne" value="<%= Page.headingOne %>">
+                <br>
+                <br>
+                <label for="headingTwo">Heading 2:</label>
+                <input type="text" name="headingTwo" value="<%= Page.headingTwo %>">
+                <br>
+                <br>
+                <label for="content">Main Content:</label>
+                <textarea type="text" name="content" id="content" <%- Page.content%></textarea>
+                <br>
+                <br>
+                <label for="MyImage">Upload Image:</label>
+                <input type="file" name="MyImage">
+                <br>
+                <br>
+                <input type="submit" value="Save">
+                </form>
+                <form action="/allpage" class="newpage">
+                <input value="Cancel" type="Submit" id="logOffBtn">
+                </form>
+                <br>
+                  
+        </main>
+        <script>
+        ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+        </script>
+<%- include('_layouts/footer') -%>     

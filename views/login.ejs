@@ -1,0 +1,22 @@
+<%- include('_layouts/header') -%>
+<form action="/">
+    <input value="Back" type="Submit" id="backBtn">
+    </form>
+    <br>
+    <br>
+        <main class="login">
+            <h3>Welcome to the Management Portal</h3>
+            
+            <form method="POST" action="/login">
+                <label for="username">Username:</label>
+                <input type="text" name="username">
+                <br>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <br>
+                <br>
+                <input type="submit" value="Login">
+            </form>
+        </main>
+<%- include('_layouts/footer') -%>

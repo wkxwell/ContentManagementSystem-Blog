@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Motivation Blog Site</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/classic/ckeditor.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="row">
+            <img src="images/Logo.png" alt="Fitness_Logo">
+            <h1>Track Your Workouts</h1>
+            <h2>Write Down Your Thoughts and Experiences!            
+            <input name="loginBtn" action="/login" value="Back" type="button" id="loginBtn">
+            </h2>
+            </div>
+        </header>
+            <nav class="nav_list">
+                <ul>
+                    <li><a class="home" href="#">Home</a></li>
+                </ul>
+            </nav>
+        <main class="AddPage">
+            <h3>Edit Content</h3>
+            
+            <form method="POST" action="/newpage" enctype="multipart/form-data" class="newpage">
+                <label for="Author">Author:</label>
+                <input type="text" name="Author">
+                <br>
+                <br>
+                <label for="Title">Title (Keep it within two words) :</label>
+                <input type="text" name="Title" id="title">
+                <br>
+                <br>
+                <label for="headingOne">Heading 1:</label>
+                <input type="text" name="headingOne">
+                <br>
+                <br>
+                <label for="headingTwo">Heading 2:</label>
+                <input type="text" name="headingTwo">
+                <br>
+                <br>
+                <label for="content">Main Content:</label>
+                <textarea type="text" name="content" id="content"></textarea>
+                <br>
+                <br>
+                <label for="MyImage">Upload Image:</label>
+                <input type="file" name="MyImage">
+                <br>
+                <br>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Create">
+                <br>
+                
+            </form>
+        </main>
+        <script>
+        ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+        </script>
+        
+        <footer>
+            <p>&copy; 2019 Motivation Blog Site CMS All Rights Reserved </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<%- include('_layouts/header') -%>
+<form action="/allpage">
+    <input value="Back" type="Submit">
+    </form>
+    <br>
+    <span>Welcome Admin!</span>
+    <br>
+              
+<main class="AddPage">
+            <h3>Create a New Blog Page</h3>
+            
+            <form method="POST" action="/newpage" enctype="multipart/form-data" class="newpage">
+                <label for="author">Author:</label>
+                <input type="text" name="author">
+                <br>
+                <br>
+                <label for="title">Title (Keep it within two words) :</label>
+                <input type="text" name="title" id="title">
+                <br>
+                <br>
+                <label for="headingOne">Heading 1:</label>
+                <input type="text" name="headingOne">
+                <br>
+                <br>
+                <label for="headingTwo">Heading 2:</label>
+                <input type="text" name="headingTwo">
+                <br>
+                <br>
+                <label for="content">Main Content:</label>
+                <textarea type="text" name="content" id="content"></textarea>
+                <br>
+                <br>
+                <label for="MyImage">Upload Image:</label>
+                <input type="file" name="MyImage">
+                <br>
+                <br>
+                <input type="submit" value="Create">
+                </form>
+                <form action="/allpage" class="newpage">
+                <input type="Submit" value="Back">
+                </form>
+                <br>
+                
+            
+        </main>
+        <script>
+        ClassicEditor
+        .create( document.querySelector( '#content' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+        </script>
+<%- include('_layouts/footer') -%>     
