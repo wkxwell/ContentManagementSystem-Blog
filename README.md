@@ -8,3 +8,5 @@ This system also support changing title text as well as changing logo images.
 
 Database 
 Mongoose library was used to connect and store information of individual pages in MongoDB. 
+
+<img src="main.png" width="500%">
