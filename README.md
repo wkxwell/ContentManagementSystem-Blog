@@ -9,4 +9,17 @@ This system also support changing title text as well as changing logo images.
 Database 
 Mongoose library was used to connect and store information of individual pages in MongoDB. 
 
+<h2>Main Page</h2>
 <img src="main.png" width="500%">
+
+
+<h2>Admin Page</h2>
+<img src="admin.png" width="500%">
+
+
+<h2>New Page</h2>
+<img src="newPage.png" width="500%">
+
+
+<h2>Content Page</h2>
+<img src="table.png" width="500%">
